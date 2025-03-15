@@ -11,14 +11,18 @@
       href="https://fonts.googleapis.com/css2?family=Righteous&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Righteous&family=Saira:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
-    <header class="flex flex-row bg-red-500 justify-between">
+    <header class="flex flex-row justify-around">
       <div class="brand flex justify-center">
         <img src="./Asset/Askmeidentity 2.png" />
       </div>
-      <div class="flex items-center justify-center nav-bar">
+      <div class="flex items-center justify-center nav-bar righteous-regular">
         <ul class="flex items-center justify-center flex-row gap-x-8">
           <li>Home</li>
           <li>About</li>
@@ -31,10 +35,53 @@
         <img src="./Asset/Icon (1).png" alt="profile" />
         <img src="./Asset/Icon (2).png" alt="search" />
       </div>
-      <div class="btn flex flex-row items-center justify-center gap-x-8">
+      <div class="btn flex flex-row items-center justify-center gap-x-8 saira">
         <button>Login</button>
-        <button>Signup</button>
+        <button
+          class="text-white bg-gradient-to-l from-violet-600 to-blue-800 rounded-lg"
+        >
+          Signup
+        </button>
       </div>
     </header>
+    <section
+      id="hero-section"
+      class="bg-gradient-to-l from-blue-900 to-violet-700 flex flex-row"
+    >
+      <div
+        class="gap-10 left-container flex flex-col mt-20 mb-20 mr-8 ml-8 righteous-regular text-white"
+      >
+        <p class="text-sm p-4">SUCCESSFUL COACHES ARE VISIONARIES</p>
+        <p class="text-5xl p-4">
+          Good <span class="font-bold text-blue-700">coaching</span> is good
+          teaching & nothing else.
+        </p>
+        <div class="flex flex-row gap-x-8 p-4">
+          <button class="rounded-lg text-sm border-2 px-4 py-2">
+            View Courses
+          </button>
+          <button>Get Free Consultation</button>
+        </div>
+        <div
+          class="search-bar rounded-lg flex flex-row justify-around items-center"
+        >
+          <p style="color: #4f547b" class="font-light">
+            What do you want to learn today?
+          </p>
+          <button
+            class="bg-gradient-to-l from-violet-600 to-blue-800 rounded-lg"
+          >
+            Search
+          </button>
+        </div>
+      </div>
+      <div class="right-container flex">
+        <img
+          src="./Asset/brunette-woman-hugging-laptop 1.png"
+          class="invert-20"
+          alt="Girl Image"
+        />
+      </div>
+    </section>
   </body>
 </html>
