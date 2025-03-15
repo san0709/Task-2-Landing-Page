@@ -1,11 +1,40 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
+    <title>Ask Me Identity</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="index.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Righteous&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
-    <h1 class="text-3xl font-bold underline">Hello world!</h1>
+    <header class="flex flex-row bg-red-500 justify-between">
+      <div class="brand flex justify-center">
+        <img src="./Asset/Askmeidentity 2.png" />
+      </div>
+      <div class="flex items-center justify-center nav-bar">
+        <ul class="flex items-center justify-center flex-row gap-x-8">
+          <li>Home</li>
+          <li>About</li>
+          <li>Courses</li>
+          <li>Contact</li>
+        </ul>
+      </div>
+      <div class="icons flex flex-row items-center justify-center gap-x-4">
+        <img src="./Asset/Icon.png" alt="cart" />
+        <img src="./Asset/Icon (1).png" alt="profile" />
+        <img src="./Asset/Icon (2).png" alt="search" />
+      </div>
+      <div class="btn flex flex-row items-center justify-center gap-x-8">
+        <button>Login</button>
+        <button>Signup</button>
+      </div>
+    </header>
   </body>
 </html>

@@ -1,0 +1,35 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.righteous-regular {
+  font-family: "Righteous", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+header {
+  height: 110px;
+  width: 100vw;
+  > .brand {
+    width: 20%;
+    > img {
+      height: 110px;
+    }
+  }
+  > nav {
+    width: 50%;
+  }
+  > .icons {
+    width: 15%;
+    > img {
+      width: 24px;
+      height: 25px;
+    }
+  }
+  > .btn {
+    width: 15%;
+  }
+}
