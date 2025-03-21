@@ -59,6 +59,9 @@ header {
 #categories {
   height: 600px;
 }
+#testimonials {
+  height: 1600px;
+}
 .left-container {
   width: 50%;
 }
@@ -115,4 +118,8 @@ header {
     height: 90px;
     width: 90px;
   }
+}
+.subscription {
+  height: 400px;
+  width: 900px;
 }
