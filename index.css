@@ -122,10 +122,37 @@ header {
 .card-4 {
   width: 400px;
   height: 200px;
-  border: 2px solid black;
+  background-color: #ffffff;
+  > img {
+    width: 120px;
+    height: 20px;
+  }
 }
 
 .subscription {
   height: 400px;
   width: 900px;
+}
+.left-list {
+  width: 30%;
+  > img {
+    height: 120px;
+    width: 240px;
+  }
+}
+.right-list {
+  width: 70%;
+}
+.social-icons {
+  height: 110px;
+}
+.circle {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  > img {
+    height: 40px;
+    width: 40px;
+  }
 }
