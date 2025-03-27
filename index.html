@@ -15,14 +15,57 @@
     href="https://fonts.googleapis.com/css2?family=Righteous&family=Saira:ital,wght@0,100..900;1,100..900&display=swap"
     rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @media (max-width: 768px) {
+      header {
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+      }
+
+      .nav-bar ul {
+        flex-direction: column;
+        gap: 4px;
+      }
+
+      .btn {
+        flex-direction: column;
+        gap: 4px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .icons img {
+        width: 20px;
+        height: 20px;
+      }
+
+      .btn button {
+        width: 100px;
+        height: 40px;
+      }
+
+      .search-bar {
+        flex-direction: column;
+        gap: 8px;
+        padding: 10px;
+      }
+
+      .search-bar button {
+        width: 100%;
+      }
+    }
+  </style>
 </head>
 
 <body>
-  <header class="flex flex-row justify-around">
+  <!---Header Section-->
+  <header class="flex flex-row flex-wrap justify-between items-center">
     <div class="brand flex items-center">
       <img src="./Asset/Askmeidentity 1 (1).png" />
     </div>
-    <div class="flex items-center justify-center nav-bar righteous-regular">
+    <!---Navigation Bar-->
+    <div class="flex items-center justify-center nav-bar grow righteous-regular">
       <ul class="flex items-center justify-center flex-row gap-x-8">
         <li>Home</li>
         <li>About</li>
@@ -35,6 +78,7 @@
       <img src="./Asset/icon-3.png" alt="profile" />
       <img src="./Asset/Icon (2).png" alt="search" />
     </div>
+    <!--Nav Buttons-->
     <div class="btn flex flex-row items-center justify-center gap-x-8 saira">
       <button>Login</button>
       <button class="text-white bg-gradient-to-l from-violet-600 to-blue-800 rounded-lg">
@@ -42,10 +86,13 @@
       </button>
     </div>
   </header>
-  <section id="hero-section" class="bg-gradient-to-l from-blue-900 to-violet-700 flex">
-    <div class="gap-10 left-container flex flex-col mt-20 mb-20 mr-8 ml-8 righteous-regular text-white">
-      <p class="text-sm p-4">SUCCESSFUL COACHES ARE VISIONARIES</p>
-      <p class="text-5xl p-4">
+  <!---Hero Section-->
+  <section id="hero-section"
+    class="bg-gradient-to-l from-blue-900 to-violet-700 flex flex-col flex-wrap justify-between items-center p-10">
+    <!--Left-Container-->
+    <div class="gap-10 p-4 left-container flex flex-col  righteous-regular text-white text-left mt-10">
+      <p class="text-sm">SUCCESSFUL COACHES ARE VISIONARIES</p>
+      <p class="text-5xl">
         Good <span class="font-bold text-blue-700">coaching</span> is good
         teaching & nothing else.
       </p>
@@ -64,7 +111,8 @@
         </button>
       </div>
     </div>
-    <div class="right-container flex flex-row justify-center items-center gap-x-2 p-8">
+    <!--Right-Container-->
+    <div class="right-container flex flex-row justify-between items-center gap-x-2">
       <img style="height: 110px;" src="./Asset/Line.png" />
       <div class="flex flex-col text-white rowdies-regular gap-y-2">
         <p>Shyam</p>
@@ -72,10 +120,11 @@
           staff, who become the experts, to provide the information.</p>
         <p>4.9</p>
       </div>
-      <img src="./Asset/women.png" alt="Lady" class="women w-full h-auto mix-blend-multiply max-w-xs" />
+      <img src="./Asset/women.png" alt="Lady" class="women w-250 h-auto mix-blend-multiply max-w-xs" />
       <div class="radial-blur blur-2xl"></div>
     </div>
   </section>
+  <!--Sponsers-Section-->
   <div
     class="p-8 sponsers bg-gradient-to-b from-indigo-900 to-violet-700 flex flex-row items-center justify-center gap-x-24">
     <img class="apps" src="/Asset/Link ⏵ brand6.png.png" />
@@ -85,6 +134,7 @@
     <img class="logitech" src="/Asset/Link ⏵ brand5.png.png" />
     <img class="apps" src="/Asset/Link ⏵ brand1.png.png" />
   </div>
+  <!---Featured-Courses-->
   <section id="featured-courses" class="bg-gradient-to-b from-sky-50 to-sky-200 p-10">
     <div class="flex flex-col justify-center items-center p-8">
       <p class="text-2xl rowdies-regular p-2">
@@ -205,6 +255,7 @@
       </button>
     </div>
   </section>
+  <!---Course-Flow-->
   <section id="course-flow"
     class="bg-gradient-to-r from-blue-400 to-violet-600 flex flex-col gap-6 items-center justify-center text-white righteous-regular">
     <p class="text-4xl">Why learn with our courses?</p>
@@ -238,6 +289,7 @@
     </div>
     </div>
   </section>
+  <!---Categories-->
   <section id="categories" class="bg-gradient-to-b from-sky-50 to-sky-200 p-10">
     <div class="flex flex-col justify-center items-center p-8 ">
       <p class="text-2xl rowdies-regular p-2">
@@ -296,6 +348,7 @@
       </div>
     </div>
   </section>
+  <!---Testimonials-->
   <section id="testimonials"
     class=" flex flex-col justify-center items-center bg-gradient-to-b from-teal-50 to-indigo-300 gap-20">
     <div
@@ -341,8 +394,9 @@
       </div>
     </div>
   </section>
-  <footer class="bg-gradient-to-r from-purple-500 to-blue-500 ">
-    <div class="flex flex-row righteous-regular p-8 gap-12">
+  <!---Footer-->
+  <footer class="bg-gradient-to-r from-purple-500 to-blue-500">
+    <div class="flex flex-wrap righteous-regular p-8 gap-12">
       <div class="left-list flex flex-col gap-4 justify-center items-center">
         <p class="font-semibold">Connect</p>
         <img src="./Asset/Askmeidentity 1 (1).png" />
@@ -351,8 +405,7 @@
           Saheb Kunta, Hyd, 500005</address>
       </div>
       <div class="right-list">
-        <div class="flex flex-row gap-8 items-center justify-center leading-8
-">
+        <div class="flex flex-wrap gap-8 items-center justify-center leading-8">
           <ul>
             <li class="font-bold">Classes</li>
             <li>Classroom courses</li>
@@ -390,7 +443,7 @@
         </div>
       </div>
     </div>
-    <div class="social-icons flex flex-col items-center justify-center bg-gradient-to-b from-indig0-500 gap-2">
+    <div class="social-icons flex flex-col items-center justify-center bg-gradient-to-b from-indigo-500 gap-2">
       <div class="flex flex-row gap-8">
         <div class="circle flex items-center justify-center">
           <img src="./Asset/Instagram.png" />

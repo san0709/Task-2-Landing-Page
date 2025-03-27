@@ -2,6 +2,7 @@ html,
 body {
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 
 .righteous-regular {
@@ -9,11 +10,13 @@ body {
   font-weight: 400;
   font-style: normal;
 }
+
 .saira {
   font-family: "Saira", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
 }
+
 .rowdies-regular {
   font-family: "Rowdies", sans-serif;
   font-weight: 400;
@@ -23,56 +26,108 @@ body {
 header {
   height: 90px;
   width: 100vw;
-  > .brand {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+
+  >.brand {
     width: 20%;
-    > img {
-      height: 90px;
+
+    >img {
+      height: 80px;
     }
   }
-  > nav {
+
+  >nav {
     width: 50%;
   }
-  > .icons {
+
+  >.icons {
     width: 10%;
-    > img {
+
+    >img {
       width: 24px;
       height: 25px;
     }
   }
-  > .btn {
-    width: 20%;
-    > button {
+
+  >.btn {
+    width: 30%;
+
+    >button {
       width: 130px;
       height: 50px;
     }
   }
 }
+
+.nav-bar ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+}
+
 #hero-section {
   height: 600px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
 }
+
 #featured-courses {
   height: 1250px;
 }
+
 #course-flow {
   height: 600px;
 }
+
 #categories {
   height: 600px;
 }
+
 #testimonials {
   height: 1600px;
 }
+
 .left-container {
-  width: 50%;
+  max-width: 50%;
 }
+
 .right-container {
-  width: 50%;
+  max-width: 50%;
 }
+
+@media (max-width: 768px) {
+
+  #hero-section .left-container,
+  #hero-section .right-container {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  #hero-section {
+    flex-direction: column;
+  }
+
+  #hero-section .left-container,
+  #hero-section .right-container {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
 .women {
   width: 500px;
   height: 700px;
   z-index: 1;
 }
+
 .radial-blur {
   width: 300px;
   height: 400px;
@@ -82,62 +137,85 @@ header {
   right: 0;
   z-index: 0;
 }
+
 .search-bar {
-  width: 480px;
-  height: 70px;
+  width: 400px;
+  height: 60px;
   background-color: White;
-  > button {
-    height: 50px;
-    width: 120px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+
+  >button {
+    height: 40px;
+    width: 85px;
   }
 }
+
 .sponsers {
   height: 100px;
 }
+
 .apps {
   height: 37px;
   width: 120px;
 }
+
 .ciso {
   height: 42px;
   width: 100px;
 }
+
 .logitech {
   height: 30px;
   width: 100px;
 }
+
 .elipse {
   width: 80px;
   height: 80px;
   display: flex;
 }
+
 .card-1 {
   height: 400px;
   width: 360px;
   background-color: white;
+  margin: 10px auto;
 }
+
 .card-2 {
   height: 240px;
   width: 340px;
-  > img {
+  margin: 10px auto;
+
+  >img {
     height: 80px;
     width: 80px;
   }
 }
+
 .card-3 {
   height: 280px;
   width: 200px;
   background-color: white;
-  > img {
+  margin: 10px auto;
+
+  >img {
     height: 90px;
     width: 90px;
   }
 }
+
 .card-4 {
   width: 400px;
   height: 200px;
   background-color: white;
-  > img {
+  margin: 10px auto;
+
+  >img {
     width: 120px;
     height: 20px;
   }
@@ -147,26 +225,88 @@ header {
   height: 400px;
   width: 900px;
 }
+
 .left-list {
   width: 30%;
-  > img {
+
+  >img {
     height: 120px;
     width: 240px;
   }
 }
+
 .right-list {
   width: 70%;
 }
+
 .social-icons {
   height: 110px;
 }
+
 .circle {
   height: 60px;
   width: 60px;
   border-radius: 50%;
   background-color: #ffffff;
-  > img {
+
+  >img {
     height: 40px;
     width: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-bar ul {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .btn {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  #hero-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .search-bar {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .icons img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .btn button {
+    width: 100px;
+    height: 40px;
+  }
+
+  .card-1,
+  .card-2,
+  .card-3,
+  .card-4 {
+    width: 90%;
+  }
+
+  .social-icons .circle {
+    width: 40px;
+    height: 40px;
+  }
+
+  .social-icons .circle img {
+    width: 24px;
+    height: 24px;
   }
 }
